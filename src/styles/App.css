@@ -1,0 +1,515 @@
+@charset "UTF-8";
+/*SASS Partials*/
+/*forgot what the purpose of this... It's important so let's just let it be*/
+@import url(/src/styles/others/default.css);
+@import url(/src/styles/others/nav-scroll.css);
+@import url(/src/styles/others/nav-responsive.css) screen and (max-width: 900px);
+@import url(/src/styles/others/cadre.css);
+@import url(/src/styles/others/button.css);
+@import url(/src/styles/others/footer-animation.css);
+main {
+  z-index: 2;
+}
+
+/*the little arrow that is there for... I don't really know why...*/
+.flèche {
+  text-align: center;
+  margin-bottom: 15%;
+}
+.flèche img {
+  width: 50px;
+  cursor: pointer;
+  transition: filter 0.4s ease-in-out;
+}
+.flèche img:hover {
+  filter: grayscale(50%) brightness(70%) sepia(100%) hue-rotate(5deg) saturate(500%) contrast(1);
+}
+
+/*First section*/
+#intro {
+  height: 901px;
+}
+#intro .parent {
+  margin-right: auto;
+  margin-left: auto;
+  padding-top: 375PX;
+  text-align: center;
+  width: 50%;
+}
+
+@media screen and (max-width: 470px) {
+  #intro .parent {
+    padding-top: 350px;
+    margin-left: 12%;
+  }
+}
+/*Three section share those propreties... They look alike so I gave 'em the same classes*/
+.titles-stuff {
+  margin: 0 12%;
+  padding-top: 10%;
+  text-align: justify;
+}
+
+.thebats {
+  margin: 35px 12%;
+  gap: 5%;
+  display: flex;
+  text-align: center;
+}
+.thebats h6 {
+  padding-top: 10px;
+}
+.thebats img {
+  width: 90%;
+  transition: 0.5s transform ease-in-out;
+  cursor: pointer;
+}
+.thebats img:hover {
+  transform: scale(1.1);
+}
+
+/*Responsive*/
+@media screen and (max-width: 850px) {
+  .titles-stuff {
+    margin: 0 16% 0 12%;
+  }
+  .thebats {
+    margin: 35px 16% 35px 12%;
+  }
+}
+/*Hors section 1 the batman who just do? I don't even know what he's doing there*/
+.vigilent {
+  position: relative;
+  height: 30vh;
+}
+.vigilent .random {
+  position: absolute;
+  right: 0;
+}
+.vigilent .random img {
+  height: 40vh;
+}
+
+/*Hors section 2 The batarang... I struggle for this one... It was hard but... Now that I did it... I'm thankfull*/
+.bata {
+  position: relative;
+}
+.bata .batarang {
+  position: absolute;
+  top: -60px;
+  left: 65px;
+}
+.bata .batarang img {
+  width: 100px;
+}
+
+/*Responsive hors section*/
+@media screen and (max-width: 850px) {
+  .vigilent .random img {
+    height: 30vh;
+  }
+}
+/*Justice league part*/
+#justiceleague .jlt {
+  margin: 0 15% 10% 15%;
+}
+#justiceleague .jl {
+  margin: 0;
+}
+#justiceleague .jl img {
+  width: 100%;
+}
+
+/*Movie trailer part*/
+.media {
+  display: flex;
+  align-items: center;
+  margin: 10% auto;
+  width: 80%;
+}
+.media .synopsis {
+  height: 230px;
+  display: flex;
+  background: linear-gradient(to bottom right, #4e4940, #091e2a);
+  border-radius: 0 20px 20px 0;
+}
+.media .synopsis .texts {
+  padding: 10px 15px;
+}
+.media .arrow {
+  margin: 0 30px;
+}
+
+/*Responsive partie trailer*/
+@media screen and (max-width: 1200px) {
+  .media {
+    width: 100%;
+  }
+  .media .synopsis {
+    height: max-content;
+  }
+}
+@media screen and (max-width: 800px) {
+  .media {
+    width: 90%;
+  }
+  .media .synopsis {
+    border-radius: 0 20px 20px 20px;
+    height: 100%;
+  }
+  .media .synopsis img {
+    display: none;
+  }
+}
+@media screen and (max-width: 550px) {
+  .media {
+    width: 75%;
+  }
+  .media .synopsis {
+    margin-top: 200px;
+    height: 100%;
+    position: relative;
+  }
+  .media .synopsis img {
+    display: block;
+    position: absolute;
+    top: -240px;
+  }
+  .media .arrow {
+    display: none;
+  }
+}
+/*Hors section, partie vidéo... */
+.video {
+  text-align: center;
+}
+.video img {
+  width: 80%;
+  transition: all 0.25s ease-in-out;
+}
+.video img:hover {
+  filter: drop-shadow(0 0 10px white);
+}
+
+/*Last part the form*/
+form {
+  background: linear-gradient(to bottom right, #4e4940, #091e2a);
+  padding: 5% 12%;
+  margin: 15% 0;
+  line-height: 30px;
+}
+form input, form select {
+  font-family: "Texte";
+  background: none;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  width: 100%;
+}
+form input:focus, form select:focus {
+  outline: none;
+}
+form select > option {
+  background-color: rgba(9, 30, 42, 0.2078431373);
+}
+
+.one, .two, .three, .four {
+  margin: 15px 0;
+}
+
+/*the real last part... Last but not a least... Quotes*/
+#quotes {
+  margin: 25% 10%;
+}
+#quotes img {
+  width: 10vh;
+}
+#quotes .leftg {
+  text-align: left;
+}
+#quotes .quotes {
+  text-align: center;
+  margin: 5% 0;
+}
+#quotes .rightd {
+  text-align: right;
+}
+#quotes .point {
+  display: flex;
+  justify-content: center;
+}
+#quotes .point .dot {
+  margin: 5px 2px;
+  width: 10px;
+  height: 10px;
+  border-radius: 15px;
+  border: 1px solid #429ef5;
+}
+
+/*END!*/
+.formulaire {
+  background: none !important;
+  text-align: left !important;
+}
+
+.login {
+  text-align: left;
+  padding: 5% 0;
+  margin: 0 auto;
+  width: 70%;
+}
+.login h1, .login p {
+  text-align: center;
+}
+.login form {
+  background: linear-gradient(to bottom right, black, grey);
+}
+.login form input {
+  margin-bottom: 20px;
+}
+
+.forgot {
+  text-align: left;
+  display: flex;
+  font-weight: normal;
+}
+
+.subpage {
+  background: url(/src/assets/images/Illustrations/bg_2.png);
+}
+
+.titile {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  width: 50%;
+  margin: 0 12%;
+}
+.titile h1 {
+  font-family: "Titre B2";
+  font-weight: 700;
+  font-size: 3em;
+  letter-spacing: 2px;
+  line-height: 65px;
+}
+
+#shop {
+  margin-top: 25%;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  gap: 2%;
+  padding: 0 10%;
+}
+#shop .filter h2 {
+  font-family: "Titre B1";
+  font-size: 2.2em;
+  letter-spacing: 2px;
+  margin-bottom: 35px;
+}
+#shop .filter .pricerange {
+  max-width: 250px;
+}
+#shop .filter .pricerange h3 {
+  font-family: "texte";
+  font-size: 1em;
+  margin-bottom: 10px;
+}
+#shop .filter .pricerange .price {
+  display: flex;
+  justify-content: space-between;
+}
+#shop .filter .types .cadre {
+  margin: 10px 0;
+}
+#shop .filter .types .cadre h3 {
+  margin-left: -10px;
+  position: relative;
+  margin-bottom: 5px;
+}
+#shop .filter .types .cadre h3::after {
+  content: "";
+  height: 1px;
+  width: 100%;
+  background: #fff;
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+}
+
+.stuff {
+  display: flex;
+  justify-content: space-between;
+  max-width: 100vw;
+  flex-wrap: wrap;
+}
+.stuff .goodies {
+  margin-bottom: 5%;
+}
+.stuff .sale {
+  border: 1px solid #fff;
+  height: 275px;
+  width: 200px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.stuff .sale .buy {
+  background: linear-gradient(to right, #fff, yellow);
+  width: fit-content;
+  color: #000;
+  font-family: "Titre B2";
+  padding: 5px 1em;
+}
+.stuff .sale .info p {
+  text-transform: uppercase;
+}
+.stuff .sale .info .money p {
+  font-family: "Titre B2";
+}
+.stuff .sale .info .money .before {
+  margin-right: 5px;
+  font-size: 0.8em;
+  color: #949090;
+  text-decoration: line-through;
+  text-decoration-color: #fff;
+}
+
+.goodies .button {
+  background: linear-gradient(to right, #EDDEBF, #890008);
+  margin: 5% 0;
+  padding: 1em 0;
+  font-size: 1.2em;
+  font-family: "Titre B1";
+  letter-spacing: 2px;
+  border: none;
+  opacity: 0.4;
+  transition: 0.4s all ease-in-out;
+  cursor: pointer;
+}
+.goodies .button:hover {
+  opacity: 1;
+}
+
+/*Shared styles*/
+/*font importation, je mets tout ici, c'est plus simple et efficace ainsi*/
+@font-face {
+  font-family: "Titre";
+  src: url(/src/assets/fonts/Rajdhani-Medium.ttf);
+}
+@font-face {
+  font-family: "Titre H2";
+  src: url(/src/assets/fonts/SpaceGrotesk-Bold.ttf);
+}
+@font-face {
+  font-family: "Texte";
+  src: url(/src/assets/fonts/SpaceGrotesk-Regular.ttf);
+}
+/*font importation, je mets tout ici, c'est plus simple et efficace ainsi*/
+@font-face {
+  font-family: "Titre";
+  src: url(/src/assets/fonts/Rajdhani-Medium.ttf);
+}
+@font-face {
+  font-family: "Titre B1";
+  src: url(/src/assets/fonts/Rajdhani-SemiBold.ttf);
+}
+@font-face {
+  font-family: "Titre B2";
+  src: url(/src/assets/fonts/Rajdhani-Bold.ttf);
+}
+@font-face {
+  font-family: "Titre H2";
+  src: url(/src/assets/fonts/SpaceGrotesk-Bold.ttf);
+}
+@font-face {
+  font-family: "Texte";
+  src: url(/src/assets/fonts/SpaceGrotesk-Regular.ttf);
+}
+h1, ul li {
+  font-family: "Titre";
+  font-size: 2.25em;
+}
+
+button, h2 {
+  font-family: "Titre";
+  font-size: 1.25em;
+}
+
+h6, h3 {
+  font-family: "Titre H2";
+  font-size: 0.9em;
+}
+
+p, label {
+  font-family: "Texte";
+  font-size: 1.125em;
+}
+
+label {
+  color: grey;
+}
+
+/*Background... First thing that the user will see...*/
+body {
+  background-color: black;
+  height: 901px;
+  font-size: 16px;
+}
+
+/*Responsive*/
+@media screen and (max-width: 900px) {
+  body {
+    font-size: 14px;
+  }
+}
+@media screen and (min-width: 950px) and (max-width: 990px) {
+  .synopsis {
+    font-size: 0.9em;
+  }
+}
+/*home bg*/
+.bg-home {
+  background: url(/src/assets/images/Illustrations/bathome/Bathome1.png) 80% 20%/cover no-repeat;
+  box-shadow: rgb(0, 0, 0) 0em -3em 30px inset;
+  height: 901px;
+}
+
+/*Game bg*/
+.bg-game {
+  background: url(/src/assets/images/Illustrations/batgame/Batgame_1.png) 80% 20%/cover no-repeat;
+  box-shadow: rgb(0, 0, 0) 0em -3em 30px inset;
+  height: 901px;
+}
+
+/*home bg*/
+.bg-eshop {
+  background: url(/src/assets/images/Illustrations/bg_1.png) 80% 20%/cover no-repeat;
+  box-shadow: rgb(0, 0, 0) 0em -3em 30px inset;
+  height: 901px;
+}
+
+/*responsive eshop*/
+@media (max-width: 900px) {
+  .bg-eshop {
+    background: url(/src/assets/images/Illustrations/bg_1_mobile.png) center/cover no-repeat;
+  }
+}
+/*Account bg*/
+.bg-account {
+  background: url(/src/assets/images/Illustrations/bg_3.png) left/cover no-repeat;
+  box-shadow: rgb(0, 0, 0) 0em -3em 30px inset;
+  height: 901px;
+}
+
+.formulaire {
+  width: fit-content;
+  height: fit-content;
+  background-color: black;
+  padding: 1rem;
+  text-align: center;
+  padding: 10%;
+}
+
+/*# sourceMappingURL=App.css.map */

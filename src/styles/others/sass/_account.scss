@@ -1,0 +1,25 @@
+.login{
+    text-align: left;
+    padding: 5% 0;
+    margin: 0 auto;
+    width: 70%;
+    h1, p{
+        text-align: center;
+    }
+    form{
+        background: linear-gradient(to bottom right, black, grey);
+        input{
+            margin-bottom: 20px;
+        }
+    }
+}
+
+.forgot{
+    text-align: left;
+    display: flex;
+    font-weight: normal;
+}
+
+.subpage{
+    background: url(/src/assets/images/Illustrations/bg_2.png);
+}

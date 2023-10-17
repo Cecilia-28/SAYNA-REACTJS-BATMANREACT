@@ -1,0 +1,133 @@
+
+@charset "UTF-8";
+/*SASS Partials*/
+@import "others/sass/home";
+@import "others/sass/account";
+@import "others/sass/eshop";
+
+/*Shared styles*/
+@import url(/src/styles/others/default.css);
+@import url(/src/styles/others/nav-scroll.css);
+@import url(/src/styles/others/nav-responsive.css) screen and (max-width: 900px);
+@import url(/src/styles/others/cadre.css);
+@import url(/src/styles/others/button.css);
+@import url(/src/styles/others/footer-animation.css);
+/*font importation, je mets tout ici, c'est plus simple et efficace ainsi*/
+@font-face {
+  font-family: "Titre";
+  src: url(/src/assets/fonts/Rajdhani-Medium.ttf);
+}
+@font-face {
+  font-family: "Titre H2";
+  src: url(/src/assets/fonts/SpaceGrotesk-Bold.ttf);
+}
+@font-face {
+  font-family: "Texte";
+  src: url(/src/assets/fonts/SpaceGrotesk-Regular.ttf);
+}
+
+/*font importation, je mets tout ici, c'est plus simple et efficace ainsi*/
+@font-face {
+  font-family: 'Titre';
+  src: url(/src/assets/fonts/Rajdhani-Medium.ttf);
+}
+@font-face {
+  font-family: 'Titre B1';
+  src: url(/src/assets/fonts/Rajdhani-SemiBold.ttf);
+}
+@font-face {
+  font-family: 'Titre B2';
+  src: url(/src/assets/fonts/Rajdhani-Bold.ttf);
+}
+@font-face {
+  font-family: 'Titre H2';
+  src: url(/src/assets/fonts/SpaceGrotesk-Bold.ttf);
+}
+@font-face {
+  font-family: 'Texte';
+  src: url(/src/assets/fonts/SpaceGrotesk-Regular.ttf);
+}
+
+
+h1, ul li {
+  font-family: "Titre";
+  font-size: 2.25em;
+}
+
+button, h2 {
+  font-family: "Titre";
+  font-size: 1.25em;
+}
+
+h6, h3 {
+  font-family: "Titre H2";
+  font-size: 0.9em;
+}
+
+p, label {
+  font-family: "Texte";
+  font-size: 1.125em;
+}
+
+label {
+  color: grey;
+}
+
+/*Background... First thing that the user will see...*/
+body{
+    background-color: black ;
+    height: 901px;
+    font-size: 16px;
+}
+    /*Responsive*/
+    @media screen and (max-width: 900px) {
+        body{
+            font-size: 14px;
+        }
+    }
+    @media screen and (min-width: 950px) and (max-width: 990px) {
+        .synopsis{
+            font-size: .9em;
+        }
+    }
+
+/*home bg*/
+.bg-home{
+  background: url(/src/assets/images/Illustrations/bathome/Bathome1.png) 80% 20%/cover no-repeat;
+  box-shadow: rgb(0, 0, 0) 0em -3em 30px inset;
+  height: 901px;
+}
+
+/*Game bg*/
+.bg-game{
+  background: url(/src/assets/images/Illustrations/batgame/Batgame_1.png) 80% 20%/cover no-repeat;
+  box-shadow: rgb(0, 0, 0) 0em -3em 30px inset;
+  height: 901px;
+}
+
+/*home bg*/
+.bg-eshop{
+  background: url(/src/assets/images/Illustrations/bg_1.png) 80% 20%/cover no-repeat;
+  box-shadow: rgb(0, 0, 0) 0em -3em 30px inset;
+  height: 901px;
+}
+/*responsive eshop*/
+@media (max-width: 900px) {
+  .bg-eshop{
+    background: url(/src/assets/images/Illustrations/bg_1_mobile.png) center/cover no-repeat;
+  }
+}
+/*Account bg*/
+.bg-account{
+  background: url(/src/assets/images/Illustrations/bg_3.png) left/cover no-repeat;
+  box-shadow: rgb(0, 0, 0) 0em -3em 30px inset;
+  height: 901px;
+}
+.formulaire{
+  width: fit-content;
+  height: fit-content;
+  background-color: black;
+  padding: 1rem;
+  text-align: center;
+  padding: 10%;
+}
